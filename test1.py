@@ -35,7 +35,7 @@ def define_server():
     global data
     data = json.loads('{"Authorization": "Bearer ' + token + '"}')  # the jobs statues call should have the token in the header as JSON
     define_server_url = baseurl + '/config/server'
-    body=json.loads('{"ctm": "ctmtest" , "host": "ctmtest", "id": "ABC", "port": 2370 }')
+    body=json.loads('{"ctm": "ctmtest" , "host": "ctmtest", "id": "ABC", "port": 2369 }')
     r2 = requests.post(define_server_url, headers=data , json=body , verify=False)
     print(r2.text)
 
